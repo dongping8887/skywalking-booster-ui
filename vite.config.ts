@@ -59,11 +59,12 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       },
       preserveSymlinks: true,
     },
+    base: "/skywalking",
     server: {
       host: true,
       port: 3000,
       proxy: {
-        "/graphql": {
+        "/skywalking/graphql": {
           target: `${VITE_SW_PROXY_TARGET || "http://127.0.0.1:12800"}`,
           changeOrigin: true,
         },

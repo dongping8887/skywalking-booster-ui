@@ -20,7 +20,7 @@ import { cancelToken } from "@/utils/cancelToken";
 
 async function query(param: { queryStr: string; conditions: { [key: string]: unknown } }) {
   const res: AxiosResponse = await axios.post(
-    "/graphql",
+    "/skywalking/graphql",
     { query: param.queryStr, variables: { ...param.conditions } },
     { cancelToken: cancelToken() },
   );
