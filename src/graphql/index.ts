@@ -51,7 +51,7 @@ class Graphql {
   public params(variablesData: unknown): AxiosPromise<void> {
     return axios
       .post(
-        "/skywalking/graphql",
+        "/skywalking-admin/graphql",
         {
           query: query[this.queryData],
           variables: variablesData,
